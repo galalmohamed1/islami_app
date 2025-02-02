@@ -190,9 +190,7 @@ class _QuranPageState extends State<QuranPage> {
                           return surahData.nameAR.contains(searchtext) ||
                               surahData.nameEN.toUpperCase().contains(searchtext.toUpperCase());
                         }).toList();
-                        setState(() {
-
-                        });
+                        setState(() {});
                       },
                       decoration: InputDecoration(
                         fillColor: AppColor.black.withOpacity(0.5),
@@ -247,7 +245,7 @@ class _QuranPageState extends State<QuranPage> {
                         ),
                       ),
                       child: ListView.separated(
-                        padding: EdgeInsets.symmetric(horizontal: 20.0),
+                        padding:const EdgeInsets.symmetric(horizontal: 20.0),
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) => GestureDetector(
                           onTap: () {
@@ -262,10 +260,9 @@ class _QuranPageState extends State<QuranPage> {
                             recentlyData: recentSuraModels[index],
                           ),
                         ),
-                        separatorBuilder: (context, index) => SizedBox(
+                        separatorBuilder: (context, index) =>const SizedBox(
                           width: 1,
                         ),
-
                         itemCount: recentSuraModels.length,
                       ),
                     ),
